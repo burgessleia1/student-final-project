@@ -1,0 +1,34 @@
+### Create student
+POST http://localhost:3000/students
+Content-Type: application/json
+
+{
+  "name": "Alice",
+  "age": 20,
+  "major": "Math"
+}
+
+###
+
+### Get all students
+GET http://localhost:3000/students
+
+###
+
+### Get student by ID
+GET http://localhost:3000/students/REPLACE_WITH_ID
+
+###
+
+### Update student
+PUT http://localhost:3000/students/REPLACE_WITH_ID
+Content-Type: application/json
+
+{
+  "age": 22
+}
+
+###
+
+### Delete student
+DELETE http://localhost:3000/students/REPLACE_WITH_ID
