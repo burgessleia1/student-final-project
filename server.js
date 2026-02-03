@@ -4,7 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 const connectDB = require('./db/connect');
 const studentRoutes = require('./routes/students');
-
+const authroutes = require('./routes/auth');
 const app = express();
 
 // Middleware
@@ -12,6 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.use('/auth', authroutes); // authentication routes under /auth
 app.use('/students', studentRoutes); // all CRUD routes under /students
 app.get('/ttech', (req, res) => {
   res.send('Your server is running and /ttech route works!');
